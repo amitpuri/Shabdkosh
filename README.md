@@ -22,6 +22,9 @@ Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration:
 
 Few Assumptions
 
-- Uses songhiawathathe00longrich_djvu.txt as dictionary to get words and it is embedded resource in ASP.NET Web API Project. To update, it is required to be uploaded in code repo and GitHub action would run to deploy again.
-- The code is test for 10K limits of text file and it is required to be tuned for bigger file.
-- It uses owlbot.info API to get definition of a keyword, It works well for top 5 words in term of occurances. It may not work for higher numbers. It may be required to parallel tasks to optimize performance.
+- Uses songhiawathathe00longrich_djvu.txt as a dictionary to get words, and it is an embedded resource in ASP.NET Web API Project. Update and upload this text file in the code repo, and the GitHub action would run to deploy again.
+- The code is tested for 10K limits of the text file, and for the bigger file, it is required to be tuned.
+- It uses owlbot.info API to define a keyword; it works well for the top 5 words in terms of occurrences. It may not work for higher numbers. It may be required to parallel tasks to optimize performance.
+
+The code is self-explanatory.
+
