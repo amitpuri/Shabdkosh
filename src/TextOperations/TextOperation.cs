@@ -9,7 +9,7 @@ namespace Shabdkosh.TextOperations
 {
     public class TextOperation: ITextOperation
     {
-        private readonly string token = "dc2e90251f219c130819b93c3795cc626b9c5ccf";
+        private readonly string token = "609b538891053085d73a526a94fb3b0ae57ee63d";
 
         public Dictionary<string, int> Text2DictWordOccurance(string text)
         {
