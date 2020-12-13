@@ -7,8 +7,9 @@ on:
   push:
     branches:
       - main
- paths:
+    paths:
       - src/**
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
