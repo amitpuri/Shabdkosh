@@ -1,6 +1,9 @@
 # Shabdkosh
 Shabdkosh API
 
+- prerequisite
+    - dotnet 5.0
+
 - clone repo
 - dotnet build
 
