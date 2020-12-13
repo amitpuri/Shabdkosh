@@ -1,0 +1,119 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Shabdkosh",
+    "version": "v1"
+  },
+  "paths": {
+    "/{top}": {
+      "get": {
+        "tags": [
+          "Shabdkosh"
+        ],
+        "parameters": [
+          {
+            "name": "top",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Shabd"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Shabd"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Shabd"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Shabdkosh": {
+      "post": {
+        "tags": [
+          "Shabdkosh"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Shabd"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Shabd"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Shabd"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Shabd": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "nullable": true
+          },
+          "occurance": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "definition": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
