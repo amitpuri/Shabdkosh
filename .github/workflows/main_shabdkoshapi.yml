@@ -21,6 +21,7 @@ jobs:
         dotnet-version: '5.0.x'
 
     - name: Build with dotnet
+      working-directory: /src
       run: dotnet build --configuration Release
 
     - name: dotnet publish
@@ -32,4 +33,4 @@ jobs:
         app-name: 'shabdkoshapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ce634c03113b44278418704e659eaa9e }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}/shabdkoshapi
