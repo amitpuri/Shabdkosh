@@ -18,8 +18,6 @@ A total of 1 test files matched the specified pattern.
 
 Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 3 m 24 s - Shabdkosh.dll (net5.0)
 
-- Test URL https://shabdkoshapi.azurewebsites.net/swagger/index.html
-
 Few Assumptions
 
 - Uses songhiawathathe00longrich_djvu.txt as a dictionary to get words, and it is an embedded resource in ASP.NET Web API Project. Update and upload this text file in the code repo, and the GitHub action would run to deploy again.
