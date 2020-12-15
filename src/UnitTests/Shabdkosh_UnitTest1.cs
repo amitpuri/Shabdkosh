@@ -24,7 +24,7 @@ namespace ShabdKosh.Tests
         public void Test1_SearchAWord()
         {
             //Arrange
-            string keyword = "University";
+            string keyword = "university";
             //act
             var result = shabdkoshService.SearchAWord(keyword);
             //assert
@@ -35,7 +35,7 @@ namespace ShabdKosh.Tests
         public void Test2_SearchAWord_NoTFound()
         {
             //Arrange
-            string keyword = "HIAWATHA";
+            string keyword = "hiawatha";
             //act
             var result = shabdkoshService.SearchAWord(keyword);
             //assert
