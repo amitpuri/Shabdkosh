@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="songhiawathathe00longrich_djvu.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="songhiawathathe00longrich_djvu.txt" />
   </ItemGroup>
 
@@ -27,6 +23,5 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-  <OpenApiReference Include="openapi.json" />
-  </ItemGroup>
+    </ItemGroup>
 </Project>
