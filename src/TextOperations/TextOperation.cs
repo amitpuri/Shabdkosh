@@ -13,7 +13,7 @@ namespace Shabdkosh.TextOperations
 
         public Dictionary<string, int> Text2DictWordOccurance(string text)
         {
-            string[] words = text.Split(new char[] { ' ' },
+            string[] words = text.ToLower().Split(new char[] { ' ' },
             StringSplitOptions.RemoveEmptyEntries);
 
             Dictionary<string, int> occuranceOfAWord = new Dictionary<string, int>();
