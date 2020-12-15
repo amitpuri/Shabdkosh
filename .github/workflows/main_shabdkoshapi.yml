@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build-test-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,10 +19,15 @@ jobs:
         dotnet-version: '5.0.x'
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: | 
+        cd ./src/
+        dotnet build -c Release
 
-    - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+    - name: Run tests with dotnet
+      run: dotnet test --no-restore --no-build -c Release
+
+    - name: dotnet publish with dotnet
+      run: dotnet publish --no-restore --no-build  -c Release -o ${{env.DOTNET_ROOT}}/shabdkoshapp
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -30,4 +35,4 @@ jobs:
         app-name: 'shabdkoshapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_089ef2cf60554be9acef85ad53756b27 }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}/shabdkoshapp 
