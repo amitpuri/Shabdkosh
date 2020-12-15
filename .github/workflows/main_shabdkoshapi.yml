@@ -3,12 +3,8 @@
 
 name: Build and deploy ASP.Net Core app to Azure Web App - shabdkoshapi
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - src/**
+on: 
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
