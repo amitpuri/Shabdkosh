@@ -32,7 +32,7 @@ namespace Shabdkosh.Controllers
         [HttpPost]
         public Shabd SearchAWord(string keyword)
         {
-            return _shabdkoshService.SearchAWord(keyword);
+            return _shabdkoshService.SearchAWord(keyword.ToLower());
         }
 
     }
