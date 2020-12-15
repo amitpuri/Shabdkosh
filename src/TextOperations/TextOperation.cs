@@ -13,7 +13,9 @@ namespace Shabdkosh.TextOperations
 
         public Dictionary<string, int> Text2DictWordOccurance(string text)
         {
-            string[] words = text.ToLower().Split(new char[] { ' ' },
+            Regex regex = new Regex("[^a-z]", RegexOptions.IgnoreCase);
+            text = regex.Replace(text, @" ").ToLower();
+            string[] words = text.Split(new char[] { ' ' },
             StringSplitOptions.RemoveEmptyEntries);
 
             Dictionary<string, int> occuranceOfAWord = new Dictionary<string, int>();
