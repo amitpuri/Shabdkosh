@@ -23,7 +23,6 @@ Few Assumptions
 - Uses songhiawathathe00longrich_djvu.txt as a dictionary to get words, and it is an embedded resource in ASP.NET Web API Project. Update and upload this text file in the code repo, and the GitHub action would run to deploy again.
 - The code is tested for 10K limits of the text file, and for the bigger file, it is required to be tuned.
 - It uses owlbot.info API to define a keyword; it works well for the top 5 words in terms of occurrences. It may not work for higher numbers. It may be required to parallel tasks to optimize performance.
-- The case sensitivity is not tested.
 
 The code is self-explanatory.
 
