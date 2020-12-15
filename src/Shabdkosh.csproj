@@ -27,6 +27,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  <OpenApiReference Include="openapi.json" />
   </ItemGroup>
-
 </Project>

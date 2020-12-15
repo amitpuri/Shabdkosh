@@ -1,18 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Shabdkosh.Helpers;
 using Shabdkosh.Persistence;
-using Shabdkosh.Services;
 using Shabdkosh.TextOperations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Shabdkosh
 {
@@ -46,10 +40,14 @@ namespace Shabdkosh
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shabdkosh v1"));
 
             app.UseRouting();
+
+            // global error handler
+            app.UseMiddleware<ErrorHandlerMiddleware>();
 
             app.UseAuthorization();
 
@@ -59,4 +57,8 @@ namespace Shabdkosh
             });
         }
     }
+
+    
+
+  
 }
