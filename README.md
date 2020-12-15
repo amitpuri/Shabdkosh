@@ -16,7 +16,7 @@ Build succeeded.
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 3 m 24 s - Shabdkosh.dll (net5.0)
+Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 3 s - Shabdkosh.dll (net5.0)
 
 Few Assumptions
 
