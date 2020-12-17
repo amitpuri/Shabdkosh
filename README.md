@@ -29,9 +29,9 @@ Few Assumptions
 
 To collect coverage
 
-    dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+    dotnet test --collect:"XPlat Code Coverage"  
 
-    reportgenerator "-reports:C:\Users\amitp\source\repos\Github\Shabdkosh\Shabdkosh.Tests\TestResults\{Guid}\coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
+    reportgenerator "-reports:Shabdkosh.Tests\TestResults\{GUID}\coverage.cobertura.xml" "-targetdir:coveragereport" 
 
 
 The code is self-explanatory.
