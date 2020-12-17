@@ -31,7 +31,7 @@ To generate report
     
 Build Docker image
 
-    docker build -f Dockerfile ..
+    docker build -f Dockerfile -t shabdkosh:v1 ..
 
 Few Assumptions
 
