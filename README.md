@@ -29,8 +29,6 @@ Few Assumptions
 
 To collect coverage
 
-    dotnet test --collect:"XPlat Code Coverage"  
-
     dotnet test -c Release -v minimal --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings --results-directory './CodeCoverageResults'
 
 To generate report
