@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Shabdkosh.csproj" />
+    <ProjectReference Include="..\Shabdkosh\Shabdkosh.csproj" />
   </ItemGroup>
 
 </Project>
