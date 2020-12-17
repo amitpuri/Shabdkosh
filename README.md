@@ -39,6 +39,7 @@ To generate report
     reportgenerator "-reports:./CodeCoverageResults\{GUID}\coverage.cobertura.xml" "-targetdir:coveragereport"    
     
 Use coverlet for coverage result    
+
     coverlet .\Shabdkosh.Tests\bin\Release\net5.0\Shabdkosh.dll --target "dotnet" --targetargs "test .\Shabdkosh.Tests\bin\Release\net5.0\Shabdkosh.Tests.dll --no-build"      
 
 
