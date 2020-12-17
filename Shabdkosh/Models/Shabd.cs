@@ -1,4 +1,4 @@
-namespace Shabdkosh
+namespace Shabdkosh.Models
 {
     public class Shabd
     {

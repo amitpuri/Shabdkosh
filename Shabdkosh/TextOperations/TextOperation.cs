@@ -4,6 +4,8 @@ using System.IO;
 using System.Net.Http;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Shabdkosh.TextOperations
 {
@@ -58,6 +60,27 @@ namespace Shabdkosh.TextOperations
                 }
             }
         }
+
+        public async Task<string>  GetDefinitionAsync(string keyword)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), string.Format("https://owlbot.info/api/v4/dictionary/{0}/", keyword)))
+                {
+
+                    request.Headers.TryAddWithoutValidation("Authorization", string.Format("Token {0}", token));
+
+                    using (HttpResponseMessage response = httpClient.SendAsync(request).Result)
+                    {
+                        using (HttpContent content = response.Content)
+                        {
+                            return await content.ReadAsStringAsync();
+                        }
+                    }
+
+                }
+            }
+        }
     }
 
     public interface ITextOperation
@@ -65,6 +88,9 @@ namespace Shabdkosh.TextOperations
         Dictionary<string, int> Text2DictWordOccurance(string text);
 
         string GetDefinition(string keyword);
+
+        Task<string> GetDefinitionAsync(string keyword);
+
     }
 
 }

@@ -7,6 +7,8 @@ using Microsoft.OpenApi.Models;
 using Shabdkosh.Helpers;
 using Shabdkosh.Persistence;
 using Shabdkosh.TextOperations;
+using MediatR;
+using System.Reflection;
 
 namespace Shabdkosh
 {
@@ -22,12 +24,15 @@ namespace Shabdkosh
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shabdkosh", Version = "v1" });
             });
+
+            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
+
+
             services.Add(new ServiceDescriptor(typeof(ITextFileRepository), new TextFileRepository()));
             services.Add(new ServiceDescriptor(typeof(ITextOperation), new TextOperation()));
             
@@ -57,8 +62,4 @@ namespace Shabdkosh
             });
         }
     }
-
-    
-
-  
 }
