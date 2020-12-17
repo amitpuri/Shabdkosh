@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" ?>
 <RunSettings>
   <DataCollectionRunSettings>
@@ -10,17 +9,4 @@
       </DataCollector>
     </DataCollectors>
   </DataCollectionRunSettings>
-=======
-<?xml version="1.0" encoding="utf-8" ?>
-<RunSettings>
-  <DataCollectionRunSettings>
-    <DataCollectors>
-      <DataCollector friendlyName="XPlat code coverage">
-        <Configuration>
-          <Format>lcov,cobertura</Format>
-        </Configuration>
-      </DataCollector>
-    </DataCollectors>
-  </DataCollectionRunSettings>
->>>>>>> 33f5bc8f410f9768a3f8d28f4c48974e3763efef
 </RunSettings>
