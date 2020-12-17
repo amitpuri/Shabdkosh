@@ -16,7 +16,8 @@ namespace ShabdKosh.Tests
             this.factory = factory;
         }
 
-        [Fact]
+        [Fact(DisplayName = "Search a word and get definition")]
+        [Trait("Category", "unit")]        
         public async Task GetByKeyword_ReturnsDefinition()
         {
             string keyword = "university";
@@ -29,7 +30,8 @@ namespace ShabdKosh.Tests
             Assert.Equal(response.Word,keyword);
         }
 
-         [Fact]
+        [Fact(DisplayName = "Search a word - not found")]
+        [Trait("Category", "unit")]        
         public async Task GetByKeyword_InvalidKeyword()
         {
             string keyword = "test";
