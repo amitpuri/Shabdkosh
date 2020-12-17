@@ -5,7 +5,8 @@ Shabdkosh API
     - dotnet 5.0
     - and install report generator
     
-            dotnet tool install -g dotnet-reportgenerator-globaltool  
+            dotnet tool install -g dotnet-reportgenerator-globaltool
+            dotnet tool install --global coverlet.console  
 
 - clone repo
 - dotnet build
@@ -31,7 +32,14 @@ To collect coverage
 
     dotnet test --collect:"XPlat Code Coverage"  
 
-    reportgenerator "-reports:Shabdkosh.Tests\TestResults\{GUID}\coverage.cobertura.xml" "-targetdir:coveragereport" 
+    dotnet test -c Release -v minimal --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings --results-directory './CodeCoverageResults'
+
+To generate report
+
+    reportgenerator "-reports:./CodeCoverageResults\{GUID}\coverage.cobertura.xml" "-targetdir:coveragereport"    
+    
+Use coverlet for coverage result    
+    coverlet .\Shabdkosh.Tests\bin\Release\net5.0\Shabdkosh.dll --target "dotnet" --targetargs "test .\Shabdkosh.Tests\bin\Release\net5.0\Shabdkosh.Tests.dll --no-build"      
 
 
 The code is self-explanatory.
