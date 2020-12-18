@@ -40,7 +40,4 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"amitpuri-Shabdkosh" /o:"amitpuri-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet restore -c Release
-          dotnet build -c Release --no-restore --no-build
-          dotnet test -c Release --no-restore --no-build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
