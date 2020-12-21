@@ -20,7 +20,7 @@ jobs:
 
     - name: Build with dotnet
       run: | 
-        cd ./src/
+        cd ./Shabdkosh/
         dotnet build -c Release
 
     - name: Run tests with dotnet
