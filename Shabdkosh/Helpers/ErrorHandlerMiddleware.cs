@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
+using System.Runtime.Serialization;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -54,7 +55,9 @@ namespace Shabdkosh.Helpers
     [Serializable]
     public class AppException : Exception
     {
-        public AppException() : base() { }
+        protected AppException(SerializationInfo info, StreamingContext context) : base(info, context) {
+
+         }
 
         public AppException(string message) : base(message) { }
 
