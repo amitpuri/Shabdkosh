@@ -51,6 +51,7 @@ namespace Shabdkosh.Helpers
         }
     }
 
+    [Serializable]
     public class AppException : Exception
     {
         public AppException() : base() { }

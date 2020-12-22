@@ -9,7 +9,6 @@ namespace Shabdkosh.Persistence
     {
         public string ReadTextFile()
         {
-            string text = string.Empty;
             var resourceName = Assembly.GetExecutingAssembly().GetManifestResourceNames().First(s => s.EndsWith("songhiawathathe00longrich_djvu.txt", StringComparison.CurrentCultureIgnoreCase));
 
             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
