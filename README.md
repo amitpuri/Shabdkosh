@@ -8,7 +8,7 @@ Shabdkosh API
             dotnet tool install -g dotnet-reportgenerator-globaltool
 
 - clone repo
-- dotnet build
+- dotnet build -c Release 
 
 Build succeeded.
     0 Warning(s)
@@ -21,13 +21,15 @@ A total of 1 test files matched the specified pattern.
 
 Passed!  - Failed:     0, Passed:     8, Skipped:     0, Total:     8, Duration: 5 s - Shabdkosh.Tests.dll (net5.0)
 
-To collect coverage
+On wsl ubuntu
 
-    dotnet test -c Release -v minimal --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings --results-directory './CodeCoverageResults'
+    To collect coverage
 
-To generate report
+        dotnet test -c Release -v minimal --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings --results-directory './CodeCoverageResults'
 
-    reportgenerator "-reports:./CodeCoverageResults\{GUID}\coverage.cobertura.xml" "-targetdir:coveragereport"    
+    To generate report
+
+        reportgenerator "-reports:./CodeCoverageResults/{GUID}/coverage.cobertura.xml" "-targetdir:coveragereport"    
     
 Build Docker image
 
