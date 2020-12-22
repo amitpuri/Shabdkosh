@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using Shabdkosh.Queries;
 using Shabdkosh.Models;
 using Shabdkosh.Persistence;
 using Shabdkosh.TextOperations;

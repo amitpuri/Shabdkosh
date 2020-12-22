@@ -1,10 +1,8 @@
 ﻿using Shabdkosh.Persistence;
 using Shabdkosh.TextOperations;
 using Shabdkosh.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Shabdkosh.Services
 {

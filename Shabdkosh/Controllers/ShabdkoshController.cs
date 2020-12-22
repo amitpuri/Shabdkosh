@@ -1,15 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Shabdkosh.Persistence;
-using Shabdkosh.Models;
-using Shabdkosh.Services;
-using Shabdkosh.TextOperations;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text.RegularExpressions;
 using MediatR;
-using System.Threading;
 using System.Threading.Tasks;
 using Shabdkosh.Queries;
 
