@@ -19,7 +19,7 @@ jobs:
         args: >
             -Dsonar.organization=amitpuri-github
             -Dsonar.projectKey=amitpuri-Shabdkosh
-            -Dsonar.cs.xunit.reportsPaths=CodeCoverageResults/b8487403-385e-4238-89b4-d623e290a808/coverage.cobertura.xml	
+            -Dsonar.cs.xunit.reportsPaths=CodeCoverageResults/3f231c14-8866-4e21-8db4-92f8ddb496b1/coverage.opencover.xml	
             -Dsonar.coverage.exclusions=coveragereport/**
             -Dsonar.verbose=true
       env:
