@@ -20,7 +20,7 @@ jobs:
             -Dsonar.organization=amitpuri-github
             -Dsonar.projectKey=amitpuri-Shabdkosh
             -Dsonar.cs.xunit.reportsPaths=CodeCoverageResults/b8487403-385e-4238-89b4-d623e290a808/coverage.cobertura.xml	
-            -Dsonar.test.exclusions=coveragereport/**
+            -Dsonar.coverage.exclusions=coveragereport/**
             -Dsonar.verbose=true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
