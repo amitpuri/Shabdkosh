@@ -17,7 +17,6 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       with:
         args: >
-            -Dsonar.organization="Amit Puri"
             -Dsonar.projectKey=amitpuri-github
             -Dsonar.cs.xunit.reportsPaths=CodeCoverageResults/b8487403-385e-4238-89b4-d623e290a808/coverage.cobertura.xml	
             -Dsonar.verbose=true
