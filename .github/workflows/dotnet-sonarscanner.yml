@@ -1,0 +1,10 @@
+  name: dotnet-sonarscanner
+  uses: spoland/dotnet-sonarcloud-analysis@v1.0
+  with:
+    project-key: amitpuri-Shabdkosh
+    sonar-host-url: https://sonarcloud.io
+    sonar-organization: amitpuri-github
+    opencover-reports-paths: "**/*.coverage.cobertura.xml"
+  env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
