@@ -11,14 +11,7 @@ jobs:
         fetch-depth: 0
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
-      with:
-	  projectBaseDir: src
-	  args: >
-      	    -Dsonar.organization=Amit Puri
-            -Dsonar.projectKey=amitpuri-github
-	        -Dsonar.cs.xunit.reportsPaths=CodeCoverageResults/b8487403-385e-4238-89b4-d623e290a808/coverage.cobertura.xml	
-            -Dsonar.verbose=true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+	env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
