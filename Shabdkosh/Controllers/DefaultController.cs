@@ -10,7 +10,7 @@ namespace Shabdkosh.Controllers
         [Route("/swagger")]
         public IActionResult Index()
         {
-            return new RedirectResult("~/swagger");
+            return new RedirectResult("~/swagger/index.html");
         }
     }
 }
